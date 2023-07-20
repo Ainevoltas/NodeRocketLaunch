@@ -1,0 +1,47 @@
+<!-- views/launch.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rocket Launch</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Rocket Launch</h1>
+  <h2>Launching Rocket with ID <%= rocketData.id %>...</h2>
+  <div id="countdown">10</div>
+  <img id="rocketImage" src="/rocketLaunch.gif" alt="Rocket Launch Animation" style="display: none;">
+
+  <% if (rocketData) { %>
+    <div id="rocketDetails">
+      <h3>Rocket Details</h3>
+      <p>ID: <%= rocketData.id %></p>
+      <p>Name: <%= rocketData.name %></p>
+      <p>Type: <%= rocketData.type %></p>
+    </div>
+  <% } %>
+
+  <script>
+    function startCountdown() {
+      let countdownElement = document.getElementById('countdown');
+      let rocketImageElement = document.getElementById('rocketImage');
+
+      let count = 10;
+      countdownElement.textContent = count;
+
+      let countdownInterval = setInterval(() => {
+        count--;
+        countdownElement.textContent = count;
+
+        if (count === 0) {
+          clearInterval(countdownInterval);
+          countdownElement.style.display = 'none'; // Hide the countdown element
+          rocketImageElement.style.display = 'block'; // Show the rocket image
+        }
+      }, 1000); // Update the countdown every second (1000 milliseconds)
+    }
+
+    // Call the countdown function when the page loads
+    window.onload = startCountdown;
+  </script>
+</body>
+</html>

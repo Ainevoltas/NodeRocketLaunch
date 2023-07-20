@@ -1,0 +1,47 @@
+/* public/styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+  #countdown {
+    font-size: 100px;
+    color: #ffcc00; 
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+
+  #rocketDetails {
+    margin-top: 40px;
+  }
+  #rocketDetails h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: #ffcc00; 
+  }
+  #rocketDetails p {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
